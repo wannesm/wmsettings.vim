@@ -1,0 +1,29 @@
+
+snippet doc "Document class" b
+%%
+%% `!v expand("%:t")`
+%%
+%% Created on `date +%d-%m-%Y` by Wannes Meert, K.U.Leuven
+%%
+\documentclass{article}
+
+\begin{document}
+
+$1
+
+\end{document}
+endsnippet
+
+snippet \hypersetup "Hypersetyp" b
+	\hypersetup{%
+		pdftitle={title},
+		pdfauthor={Wannes Meert},
+		pdfkeywords={keyword1, keyword2},
+		colorlinks=true,% Make links colored
+		linkcolor=blue,
+		citecolor=blue,
+		urlcolor=blue,
+		pdfborder={0,0,0}% Remove border around links
+	}
+endsnippet
+
