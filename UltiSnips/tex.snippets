@@ -14,7 +14,7 @@ $1
 \end{document}
 endsnippet
 
-snippet \hypersetup "Hypersetyp" b
+snippet \hypersetup "Hypersetup" b
 	\hypersetup{%
 		pdftitle={title},
 		pdfauthor={Wannes Meert},
@@ -27,3 +27,11 @@ snippet \hypersetup "Hypersetyp" b
 	}
 endsnippet
 
+snippet fig "Figure" b
+\begin{figure}
+	\centering
+	\includegraphics[width=\linewidth]{${1:figure.pdf}}
+	\caption{${2:caption}}
+	\label{fig:${3:label}}
+\end{figure}
+endsnippet
