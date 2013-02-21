@@ -76,3 +76,8 @@ endfunction
 com! -nargs=0 SyntaxStack :call SyntaxStackPrint()
 map <Leader>o :SyntaxStack<CR>
 
+
+"-- VIMRC EDITING ------------------------------------------------------------
+
+com! -nargs=0 Erc :tabedit $MYVIMRC
+com! -nargs=0 Src :so $MYVIMRC

@@ -9,27 +9,27 @@ endif
 let s:loaded = 1
 
 " clang_completion
-let g:clang_complete_copen=1
+"let g:clang_complete_copen=1
 
 " OmniCppCompletion
 " configure tags - add additional tags here or comment out not-used ones
-set tags+=~/.vim/tags/cpp
-set tags+=~/.vim/tags/boost
+"set tags+=~/.vim/tags/cpp
+"set tags+=~/.vim/tags/boost
 " build tags of your own project with CTRL+F12
-map <C-F12> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
+"map <C-F12> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
 
 " OmniCppComplete
-let OmniCpp_SelectFirstItem = 2 " select first item (but don't insert)
-let OmniCpp_NamespaceSearch = 1
-let OmniCpp_GlobalScopeSearch = 1
-let OmniCpp_ShowAccess = 1
-let OmniCpp_ShowPrototypeInAbbr = 1 " show function parameters
-let OmniCpp_MayCompleteDot = 1 " autocomplete after .
-let OmniCpp_MayCompleteArrow = 1 " autocomplete after ->
-let OmniCpp_MayCompleteScope = 0 " autocomplete after ::
-let OmniCpp_DefaultNamespaces = ["std", "_GLIBCXX_STD"]
+"let OmniCpp_SelectFirstItem = 2 " select first item (but don't insert)
+"let OmniCpp_NamespaceSearch = 1
+"let OmniCpp_GlobalScopeSearch = 1
+"let OmniCpp_ShowAccess = 1
+"let OmniCpp_ShowPrototypeInAbbr = 1 " show function parameters
+"let OmniCpp_MayCompleteDot = 1 " autocomplete after .
+"let OmniCpp_MayCompleteArrow = 1 " autocomplete after ->
+"let OmniCpp_MayCompleteScope = 0 " autocomplete after ::
+"let OmniCpp_DefaultNamespaces = ["std", "_GLIBCXX_STD"]
 " automatically open and close the popup menu / preview window
-au CursorMovedI,InsertLeave * if pumvisible() == 0|silent! pclose|endif
+"au CursorMovedI,InsertLeave * if pumvisible() == 0|silent! pclose|endif
 
 
 " Outline with tabs and spaces
