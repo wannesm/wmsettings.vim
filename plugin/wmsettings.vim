@@ -24,7 +24,6 @@ fu! ToggleWrap()
     silent! iunmap <buffer> <End>
     silent! iunmap <buffer> <D-Left>
     silent! iunmap <buffer> <D-Right>
-	set list
   else
     echo "Wrap ON"
     setlocal wrap linebreak nolist
