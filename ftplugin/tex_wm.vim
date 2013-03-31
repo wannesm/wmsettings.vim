@@ -40,3 +40,10 @@ let g:LatexBox_cite_pattern = '\\\(paren\|text\)\?cite\(p\|t\)\?\*\?\_\s*{'
 
 AddTabularPattern! latex_tabular /\(&\|\\\\\)/
 
+" Spacing settings
+
+setlocal tabstop=2
+setlocal shiftwidth=2
+setlocal softtabstop=2
+setlocal expandtab
+
