@@ -31,11 +31,6 @@ let g:tagbar_type_html = {
 	\ 'sort'      : 0,
 	\ 'kinds'     : [
 		\ 'h:headings'
-	\ ],
-	\ 'sro'       : ':',
-	\ 'kind2scope': {
-	\ },
-	\ 'scope2kind' : {
-	\}
+	\ ]
 \ }
 
