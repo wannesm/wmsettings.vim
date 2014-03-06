@@ -3,14 +3,30 @@ snippet doc "Document class" b
 %%
 %% `!v expand("%:t")`
 %%
-%% Created on `date +%d-%m-%Y` by Wannes Meert, K.U.Leuven
+%% Created on `date +%d-%m-%Y` by Wannes Meert, KU Leuven
 %%
 \documentclass{article}
 
+\title{Title}
+\author{Wannes Meert}
+
+\usepackage{graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{amsmath,amssymb}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{csquotes}
+
+
+\usepackage[backend=biber]{biblatex}
+\addbibresource{file.bib}
+
 \begin{document}
+\maketitle
 
 $1
 
+\printbibliography
 \end{document}
 endsnippet
 

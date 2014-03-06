@@ -8,6 +8,10 @@ setl wildignore+=*.class
        "\%W\ %#[warn]\ %f:%l:\ %m,%C\ %#[warn]\ %p^,%-C%.%#,%Z,
        "\%-G%.%#
 
+setlocal tabstop=2
+setlocal softtabstop=2
+setlocal shiftwidth=2
+setlocal expandtab
 
 
 " Extend tagbar

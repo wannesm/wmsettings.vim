@@ -34,7 +34,6 @@ map <silent> <leader>ls :silent !/Applications/Skim.app/Contents/SharedSupport/d
 	"\%+Q%*[^()])%r,
 	"\%+Q[%\\d%*[^()])%r
 
-let g:LatexBox_cite_pattern = '\\\(paren\|text\)\?cite\(p\|t\)\?\*\?\_\s*{'
 
 " Tabular settings
 

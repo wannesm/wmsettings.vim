@@ -1,5 +1,42 @@
-
 snippet tpl "Template" b
+#!/usr/bin/env python
+# encoding: utf-8
+"""
+`!v expand("%:t")`
+
+Created by Wannes Meert on `date +%d-%m-%Y`.
+Copyright (c) `date +%Y` KU Leuven. All rights reserved.
+"""
+
+import sys
+import argparse
+
+def main(argv=None):
+
+  parser = argparse.ArgumentParser(description='Perform some task')
+  parser.add_argument('--verbose', '-v', action='count', help='Verbose output')
+  parser.add_argument('--flag', '-f', action='store_true', help='Flag help')
+  parser.add_argument('--output', '-o', required=True, help='Output file')
+  parser.add_argument('--version', action='version', version='%(prog)s 1.0')
+  parser.add_argument('input', nargs='+', help='List of input files')
+
+  args = parser.parse_args(argv)
+
+  verbose = args.verbose
+  flag = args.flag
+  output = args.output
+  inputs = args.input
+
+  pass
+
+
+if __name__ == "__main__":
+    sys.exit(main())
+
+endsnippet
+
+
+snippet tplold "Template" b
 #!/usr/bin/env python
 # encoding: utf-8
 """
