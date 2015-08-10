@@ -37,7 +37,7 @@ map <silent> <leader>ls :silent !/Applications/Skim.app/Contents/SharedSupport/d
 
 " Tabular settings
 
-AddTabularPattern! latex_tabular /\(&\|\\\\\)/
+AddTabularPattern! latex_tabular /\(&\|\\\\\)/r1
 
 " Spacing settings
 
@@ -45,4 +45,15 @@ setlocal tabstop=2
 setlocal shiftwidth=2
 setlocal softtabstop=2
 setlocal expandtab
+
+" Tagbar settings
+
+let g:tagbar_type_tex = {
+\ 'ctagstype' : 'latex',
+    \ 'kinds'     : [
+        \ 's:sections',
+        \ 'g:graphics:0:0'
+    \ ],
+    \ 'sort'    : 0
+\ }
 
