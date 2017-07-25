@@ -1,5 +1,5 @@
 snippet tpl "Template" b
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # encoding: utf-8
 """
 `!v expand("%:t")`
@@ -10,24 +10,25 @@ Copyright (c) `date +%Y` KU Leuven. All rights reserved.
 
 import sys
 import argparse
+import logging
+
+logger = logging.getLogger(__name__)
+
 
 def main(argv=None):
+    parser = argparse.ArgumentParser(description='Perform some task')
+    parser.add_argument('--verbose', '-v', action='count', default=0, help='Verbose output')
+    parser.add_argument('--quiet', '-q', action='count', default=0, help='Quiet output')
+    # parser.add_argument('--flag', '-f', action='store_true', help='Flag help')
+    # parser.add_argument('--output', '-o', required=True, help='Output file')
+    # parser.add_argument('--version', action='version', version='%(prog)s 1.0')
+    # parser.add_argument('input', nargs='+', help='List of input files')
+    args = parser.parse_args(argv)
 
-  parser = argparse.ArgumentParser(description='Perform some task')
-  parser.add_argument('--verbose', '-v', action='count', help='Verbose output')
-  parser.add_argument('--flag', '-f', action='store_true', help='Flag help')
-  parser.add_argument('--output', '-o', required=True, help='Output file')
-  parser.add_argument('--version', action='version', version='%(prog)s 1.0')
-  parser.add_argument('input', nargs='+', help='List of input files')
+    logger.setLevel(max(logging.INFO - 10 * (args.verbose - args.quiet), logging.DEBUG))
+    logger.addHandler(logging.StreamHandler(sys.stdout))
 
-  args = parser.parse_args(argv)
-
-  verbose = args.verbose
-  flag = args.flag
-  output = args.output
-  inputs = args.input
-
-  pass
+    pass
 
 
 if __name__ == "__main__":
