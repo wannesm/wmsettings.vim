@@ -2,8 +2,8 @@
 setl wildignore+=*.aux,*.bbl,*.blg,*.brf,*.dvi,*.glg,*.glo,*.gls,*.ilg,*.ist,*.lof,*.lot,*.nlo,*.nls,*.out,*.gz,*.ps,*.idx,*.ind,*.toc
 
 " Synctex
-map <silent> <leader>ls :silent !/Applications/Skim.app/Contents/SharedSupport/displayline
-  \ <c-r>=line('.')<cr> "<c-r>=LatexBox_GetOutputFile()<cr>" "%:p" <cr>
+"map <silent> <leader>ls :silent !/Applications/Skim.app/Contents/SharedSupport/displayline
+  "\ <c-r>=line('.')<cr> "<c-r>=LatexBox_GetOutputFile()<cr>" "%:p" <cr>
 
 " Errorformat for latex (from manual)
 "setl efm=%E!\ LaTeX\ %trror:\ %m,
